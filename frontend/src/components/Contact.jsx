@@ -1,5 +1,7 @@
 import React from "react";
 
+const backendBaseUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
 const sendEmail = async (e) => {
   e.preventDefault();
 
@@ -11,7 +13,7 @@ const sendEmail = async (e) => {
   };
 
   try {
-    const res = await fetch("http://localhost:5000/send", {
+    const res = await fetch(`${backendBaseUrl}/send`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
