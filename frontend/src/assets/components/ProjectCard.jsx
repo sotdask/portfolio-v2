@@ -44,7 +44,7 @@ const ProjectCard = ({ project }) => {
             View Repository
           </a>
           <a
-            href="#"
+            href={project.projectPage} target="_blank"
             className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-sm  text-white font-bold py-3 rounded-xl hover:from-purple-600 hover:to-pink-600 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105 text-center block"
           >
             View Project

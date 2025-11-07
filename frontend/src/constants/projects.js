@@ -9,7 +9,7 @@ export const Projects = [
     description:
       "Α motorcucle showcasing platform where users can explore the history of Matakos Motors, various articles about Yamaha or scroll through various bike models.",
     githubLink: "https://github.com/sotdask/matakos-motors",
-    projectPage: "#",
+    projectPage: "http://www.matakosmotors.gr/",
     technologies: ["Laravel", "Bootstrap", "PHP", "SCSS"]
   },
   {
@@ -20,7 +20,7 @@ export const Projects = [
     description:
       "A mock-up loading page of a famous website with organic products.",
     githubLink: "https://github.com/sotdask/botanica-mockup",
-    projectPage: "#",
+    projectPage: "https://sotdask.github.io/botanica-mockup/",
     technologies: ["React", "Tailwind", "Framer Motion"]
   },
   {
