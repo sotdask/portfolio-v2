@@ -13,7 +13,13 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5173', 'https://sotdask.github.io'],
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:5173',
+    'https://sotdask.github.io',
+    'https://sotdask.gr',
+    'https://www.sotdask.gr'
+  ],
   credentials: true
 }));
 
