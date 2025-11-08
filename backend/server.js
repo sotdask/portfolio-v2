@@ -71,7 +71,7 @@ app.post('/send', async (req, res) => {
     // Create email transporter
     console.log('🔧 Creating email transporter...');
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
+      host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT || 587),
       secure: false, // STARTTLS
       requireTLS: true,
