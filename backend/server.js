@@ -71,17 +71,19 @@ app.post('/send', async (req, res) => {
     // Create email transporter
     console.log('🔧 Creating email transporter...');
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
+      host: process.env.SMTP_HOST || 'smtp.gmail.com',
       port: Number(process.env.SMTP_PORT || 587),
-      secure: false, // STARTTLS
-      requireTLS: true,
+      secure: Number(process.env.SMTP_PORT || 587) === 465,
+      requireTLS: Number(process.env.SMTP_PORT || 587) !== 465,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
     });
 
+    console.log('🔒 Verifying transporter...');
     await transporter.verify();
+    console.log('✅ Transporter ready');
 
     // Prepare email content
     const emailSubject = `Νέο μήνυμα από ${name} - Portfolio Contact Form`;
