@@ -1,7 +1,7 @@
 import React from "react";
 
 const backendBaseUrl = (
-  import.meta.env.VITE_BACKEND_URL || "http://localhost:5000"
+  (import.meta.env.VITE_BACKEND_URL || "http://localhost:5000").trim()
 ).replace(/\/$/, "");
 
 const sendEmail = async (e) => {
